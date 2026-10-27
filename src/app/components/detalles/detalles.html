@@ -1,0 +1,49 @@
+@let p = producto();
+
+<button class= "volver" type="button" (click)="router.navigate(['/catalogo'])"> &leftarrow; Volver al Catalogo</button>
+
+@if (p) {
+    <div class="caracteristicas">
+        <p class="marca">{{p.brand}}</p>
+        <h1>{{p.modelName}}</h1>
+        <p class="subtitulo">{{p.category}} . {{p.material}}</p>
+        <p class="precio">$ {{p.salePrice}}</p>
+    </div>
+
+<div class="datos">
+    <div><small>Marca</small><strong>{{p.brand}}</strong></div>
+    <div><small>Material</small><strong>{{p.material}}</strong></div>
+    <div><small>Disponibilidad</small>
+
+        @if (p.isInStore) {
+            <span><strong>Disponible</strong></span>
+        }@else {
+            <span><strong>Sin stock</strong></span>
+        }
+    </div>
+</div>
+
+<div class="pestañas">
+    <button type="button" [class.activa] = "panel() === 'notes'" (click)="panel.set('notes')">Descripcion del metodo</button>
+    <button type="button" [class.activa] ="panel() === 'notes'" (click)="panel.set('cupProfile')">En la taza</button>
+</div>
+@if (panel() === 'notes') {
+    <h3>¿Como funciona?</h3>
+    <p>{{p.notes}}</p>
+}@else {
+    <h3>En la taza</h3>
+    <p>{{p.cupProfile}}</p>
+}
+
+<div class="botones">
+    <button type="button" class="editarBoton" (click)="editando.update((v => !v))">
+        @if (editando()) {Cancelar} @else {Editar Prodcuto}
+    </button>
+    <button type="button" (click)="eliminar()">Eliminar Producto</button>
+</div>
+@if (editando()) {
+    <app-form [producto]="p" (editado)="alEditar($event)"/>
+}
+}@else{
+    <p>No encontrado...</p>
+}

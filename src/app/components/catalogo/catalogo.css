@@ -1,0 +1,86 @@
+:host {                                            /* la etiqueta <app-catalogo> en sí misma */
+  display: block;                                  /* se comporta como bloque: ocupa todo el ancho disponible */
+  padding: 0 2rem;                                 /* espacio interno: 0 arriba y abajo, 2rem a los costados */
+}
+
+.panel {                                           /* la barra de filtros */
+  display: flex;                                   /* sus hijos (filtros, botón, contador) quedan en fila */
+  align-items: flex-end;                           /* los alinea abajo, para que los controles queden parejos */
+  gap: 1rem;                                       /* espacio entre un hijo y el siguiente */
+  padding: 1rem;                                   /* espacio interno entre el borde y el contenido */
+  margin-bottom: 1.5rem;                           /* espacio de afuera, debajo: separa el panel de las tarjetas */
+  background: var(--fondo-tarjetas);               /* color de fondo: crema claro de la paleta */
+  border: 1px solid var(--fondo-secundario);       /* borde: grosor, estilo y color (beige) */
+  border-radius: 8px;                              /* esquinas redondeadas */
+}
+
+.filtro {                                          /* cada filtro: etiqueta y desplegable */
+  display: flex;                                   /* sus hijos se acomodan en un eje */
+  flex-direction: column;                          /* eje vertical: etiqueta arriba, desplegable abajo */
+  gap: 0.25rem;                                    /* espacio entre la etiqueta y el desplegable */
+}
+
+select,
+option {                                           /* NUEVO: los desplegables y sus opciones (la coma = "y") */
+  color: var(--texto-principal);                   /* NUEVO: color del texto: marrón oscuro */
+  background: var(--fondo-tarjetas);               /* NUEVO: color de fondo: crema claro */
+}
+
+.panel p {                                         /* el párrafo del contador, dentro del panel */
+  margin: 0 0 0 auto;                              /* margen: arriba 0, derecha 0, abajo 0, izquierda auto (empuja el contador a la derecha) */
+}
+
+.panel button {                                    /* "Limpiar Filtros": botón secundario */
+  background: transparent;                         /* sin relleno */
+  color: var(--texto-principal);                   /* texto marrón oscuro */
+  border: 1px solid var(--boton-principal);        /* borde fino marrón */
+  border-radius: 6px;                              /* esquinas redondeadas */
+  padding: 0.4rem 0.8rem;                          /* espacio interno: arriba/abajo y costados */
+  cursor: pointer;                                 /* manito al pasar el mouse */
+}
+
+.lista {                                           /* el contenedor de las tarjetas */
+  display: grid;                                   /* activa CSS Grid: filas y columnas */
+  grid-template-columns: repeat(3, 1fr);           /* 3 columnas iguales (1fr = una fracción del ancho) */
+  gap: 1rem;                                       /* espacio entre tarjetas, en filas y columnas */
+}
+
+.tarjeta {                                         /* cada tarjeta de producto */
+  display: flex;                                   /* su contenido se acomoda en un eje */
+  flex-direction: column;                          /* eje vertical: un dato debajo del otro */
+  gap: 0.4rem;                                     /* espacio entre los datos */
+  padding: 1rem;                                   /* espacio interno */
+  background: var(--fondo-tarjetas);               /* fondo crema claro */
+  border: 1px solid var(--fondo-secundario);       /* borde beige */
+  border-radius: 8px;                              /* esquinas redondeadas */
+}
+
+.categoria {                                       /* la categoría, arriba y chica */
+  color: var(--boton-principal);                   /* color marrón */
+  font-size: 0.8rem;                               /* tamaño de letra: 80% del base */
+  font-weight: bold;                               /* negrita */
+}
+
+.marca {                                           /* la marca */
+  color: var(--texto-secundario);                  /* gris-marrón, más suave */
+  font-size: 0.9rem;                               /* tamaño de letra: 90% del base */
+}
+
+.pie {                                             /* la línea del precio y el stock */
+  display: flex;                                   /* los dos en fila */
+  justify-content: space-between;                  /* precio pegado a la izquierda, stock a la derecha */
+  align-items: center;                             /* centrados en vertical */
+}
+
+.tarjeta button {                                  /* "Ver Detalle": botón principal */
+  background: var(--boton-principal);              /* fondo marrón */
+  color: var(--texto-detalles);                    /* texto crema */
+  border: none;                                    /* sin borde */
+  border-radius: 6px;                              /* esquinas redondeadas */
+  padding: 0.6rem;                                 /* espacio interno, parejo en los 4 lados */
+  cursor: pointer;                                 /* manito al pasar el mouse */
+}
+
+.tarjeta button:hover {                            /* el mismo botón, con el mouse encima */
+  background: var(--boton-principal-hover);        /* marrón más oscuro */
+}

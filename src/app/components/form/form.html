@@ -1,0 +1,82 @@
+<div class="arriba">
+    <h2 class="titulo">Nuevo producto</h2>
+    <p>Completa los datos para registrar un metodo de preparacion en el catalogo</p>
+</div>
+<form [formRoot]="formulario">
+  <div class="contenedor">
+    <div class="control">
+      <label for="modelName">Nombre del modelo</label>
+      <input type="text" id="modelName" [formField]="formulario.modelName" />
+      @if (formulario.modelName().invalid() && formulario.modelName().touched()) {
+        <span class="errors">{{ formulario.modelName().errors()[0].message }}</span>
+      }
+    </div>
+
+    <div class="control">
+      <label for="brand">Marca</label>
+      <input type="text" id="brand" [formField]="formulario.brand" />
+      @if (formulario.brand().invalid() && formulario.brand().touched()) {
+        <span class="errors">{{ formulario.brand().errors()[0].message }}</span>
+      }
+    </div>
+
+    <div class="control">
+      <label for="category">Categoria</label>
+      <select id="category" [formField]="formulario.category">
+        <option value="">Seleccionar Categoria</option>
+        <!-- cartel inicial. Su valor vacío es lo que required rechaza: por eso "sin elegir" da error -->
+        @for (c of categorias; track c) {
+          <!-- recorre la lista: una vuelta por cada categoría, y c vale la categoría de esa vuelta -->
+          <option [value]="c">{{ c }}</option>
+          <!-- [value]="c" con corchetes = el VALOR de la variable. Sin corchetes, todas valdrían la letra "c". {{c}} es el texto que se ve -->
+        }
+      </select>
+      @if (formulario.category().invalid() && formulario.category().touched()) {
+        <span class="errors">{{ formulario.category().errors()[0].message }}</span>
+      }
+    </div>
+
+    <div class="control">
+        <label for="material">Material</label>
+        <input type="text" id="material" [formField]="formulario.material">
+        @if (formulario.material().invalid() && formulario.material().touched()) {
+            <span class="errors">{{formulario.material().errors()[0].message}}</span>
+        }
+    </div>
+
+    <div class="control">
+        <label for="salePrice">Precio de venta (ARS)</label>
+        <input type="number" id="salePrice" [formField]="formulario.salePrice">
+        @if (formulario.salePrice().invalid() && formulario.salePrice().touched()) {
+            <span class="errors">{{formulario.salePrice().errors()[0].message}}</span>
+        }
+    </div>
+
+    <div class="control checkbox">
+      <label for="isInStore">Disponibilidad*</label>
+      <input type="checkbox" id="isInStore" [formField]="formulario.isInStore" />
+    </div>
+
+    <div class="control">
+        <label for="notes">Descripcion del metodo</label>
+        <textarea id="notes" [formField]="formulario.notes" rows="3"></textarea>
+        @if (formulario.notes().invalid() && formulario.notes().touched()) {
+            <span class="errors">{{formulario.notes().errors()[0].message}}</span>
+        }
+        </div>
+
+        <div class="control">
+            <label for="cupProfile">Perfil de taza</label>
+            <textarea id="cupProfile" [formField]="formulario.cupProfile" rows="3"></textarea>
+            @if (formulario.cupProfile().invalid() && formulario.cupProfile().touched()){
+                <span class="errors">{{formulario.cupProfile().errors()[0].message}}</span>    
+            }
+        </div>
+
+        <div class="botones">
+            <button type="submit">Guardar Prodcuto</button>
+            <button type="button" (click)="limpiar()">Cancelar</button>
+        </div>
+  </div>
+
+</form>

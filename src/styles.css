@@ -1,0 +1,19 @@
+:root {
+--fondo-principal: #f2ece2;
+--fondo-tarjetas: #fffaf2;
+--fondo-secundario: #e9ddce;
+--fondo-oscuro: #3b2922;
+--fondo-header-oscuro: #30211c;
+--fondo-detalles-info: #4a332a;
+
+/* Textos */
+--texto-principal: #352820;
+--texto-secundario: #77685b;
+--texto-detalles: #fff1dd;
+--texto-detalles-secundario: #d0bba5;
+--boton-principal: #76503b;
+--boton-principal-hover: #593a2c;
+--boton-detalles: #d6b38c;
+--boton-detalles-hover: #e6c8a5;
+--boton-eliminar: #934d3f;
+}

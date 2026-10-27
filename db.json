@@ -1,0 +1,159 @@
+{
+  "brewingDevices": [
+    {
+      "id": "1",
+      "modelName": "Linea Mini",
+      "category": "Espresso",
+      "salePrice": 1850000,
+      "brand": "La Marzocco",
+      "material": "Acero inoxidable",
+      "isInStore": true,
+      "notes": "Extrae el café mediante alta presión en poco tiempo, utilizando café finamente molido.",
+      "cupProfile": "Bebida concentrada, de cuerpo intenso y textura densa, con crema característica y sabores pronunciados."
+    },
+    {
+      "id": "2",
+      "modelName": "Dedica Style",
+      "category": "Espresso",
+      "salePrice": 420000,
+      "brand": "De'Longhi",
+      "material": "Acero inoxidable y plástico",
+      "isInStore": true,
+      "notes": "Máquina compacta que utiliza presión para preparar espresso a partir de café finamente molido.",
+      "cupProfile": "Café concentrado y de cuerpo marcado, con aromas intensos. La crema y el equilibrio dependen del café y de la extracción."
+    },
+    {
+      "id": "3",
+      "modelName": "V60 Ceramic 02",
+      "category": "V60",
+      "salePrice": 58000,
+      "brand": "Hario",
+      "material": "Cerámica",
+      "isInStore": true,
+      "notes": "Dripper cónico de filtrado manual que permite controlar el vertido y el flujo del agua durante la extracción.",
+      "cupProfile": "Taza limpia y definida, con aromas claros y acidez perceptible. Puede resaltar notas frutales y florales según el café."
+    },
+    {
+      "id": "4",
+      "modelName": "V60 Plastic 02",
+      "category": "V60",
+      "salePrice": 22000,
+      "brand": "Hario",
+      "material": "Plástico",
+      "isInStore": false,
+      "notes": "Dripper cónico liviano que utiliza filtrado manual y permite ajustar la extracción mediante el vertido.",
+      "cupProfile": "Café limpio y aromático, con sabores diferenciados y una acidez que puede destacar según el origen y la receta."
+    },
+    {
+      "id": "5",
+      "modelName": "Classic 6 Cup",
+      "category": "Chemex",
+      "salePrice": 125000,
+      "brand": "Chemex",
+      "material": "Vidrio y madera",
+      "isInStore": true,
+      "notes": "Cafetera de filtrado manual que utiliza filtros de papel gruesos capaces de retener gran parte de los aceites y sedimentos.",
+      "cupProfile": "Taza especialmente limpia, de cuerpo ligero y textura delicada, con sabores definidos y poco sedimento."
+    },
+    {
+      "id": "6",
+      "modelName": "Glass Handle 3 Cup",
+      "category": "Chemex",
+      "salePrice": 98000,
+      "brand": "Chemex",
+      "material": "Vidrio borosilicato",
+      "isInStore": true,
+      "notes": "Versión compacta de la cafetera Chemex que utiliza filtros gruesos para separar el café molido de la bebida.",
+      "cupProfile": "Café de textura ligera y limpia, con un perfil delicado en el que pueden distinguirse con claridad los matices aromáticos."
+    },
+    {
+      "id": "7",
+      "modelName": "AeroPress Original",
+      "category": "AeroPress",
+      "salePrice": 65000,
+      "brand": "AeroPress",
+      "material": "Plástico resistente",
+      "isInStore": true,
+      "notes": "Combina la inmersión del café en agua con presión manual para hacer pasar la bebida a través de un filtro.",
+      "cupProfile": "Puede ofrecer una taza de cuerpo medio a intenso, con dulzor perceptible y acidez moderada. El resultado cambia mucho según la receta."
+    },
+    {
+      "id": "8",
+      "modelName": "AeroPress Go",
+      "category": "AeroPress",
+      "salePrice": 72000,
+      "brand": "AeroPress",
+      "material": "Plástico resistente",
+      "isInStore": false,
+      "notes": "Sistema portátil que combina inmersión y presión manual, pensado para preparar café en distintos lugares.",
+      "cupProfile": "Café versátil, que puede resultar suave y equilibrado o más concentrado, con buen control de la intensidad mediante la receta."
+    },
+    {
+      "id": "9",
+      "modelName": "Origami Dripper M",
+      "category": "Origami",
+      "salePrice": 69000,
+      "brand": "Origami",
+      "material": "Cerámica",
+      "isInStore": true,
+      "notes": "Dripper con nervaduras verticales compatible con distintos tipos de filtro, lo que permite modificar el flujo del agua y la extracción.",
+      "cupProfile": "Puede producir una taza limpia y expresiva, con dulzor, acidez y aromas bien definidos. El perfil depende del filtro y de la técnica utilizada."
+    },
+    {
+      "id": "10",
+      "modelName": "Origami Air S",
+      "category": "Origami",
+      "salePrice": 35000,
+      "brand": "Origami",
+      "material": "Resina",
+      "isInStore": true,
+      "notes": "Dripper liviano de filtrado manual cuyo diseño permite utilizar diferentes filtros y ajustar la preparación.",
+      "cupProfile": "Puede destacar la claridad aromática y los matices del café, con un cuerpo y una acidez variables según el filtro y la receta."
+    },
+    {
+      "id": "11",
+      "modelName": "Technica",
+      "category": "Sifón japonés",
+      "salePrice": 245000,
+      "brand": "Hario",
+      "material": "Vidrio y metal",
+      "isInStore": true,
+      "notes": "Utiliza vapor para impulsar el agua hacia la cámara superior, donde se mezcla con el café; al enfriarse, el vacío hace que la bebida atraviese el filtro y regrese al recipiente inferior.",
+      "cupProfile": "Taza aromática y limpia, con sabores definidos y una textura relativamente ligera. La inmersión puede favorecer una extracción equilibrada."
+    },
+    {
+      "id": "12",
+      "modelName": "Next",
+      "category": "Sifón japonés",
+      "salePrice": 198000,
+      "brand": "Hario",
+      "material": "Vidrio y acero inoxidable",
+      "isInStore": false,
+      "notes": "Cafetera de sifón que combina presión de vapor, inmersión y vacío para preparar café mediante un proceso visible en dos cámaras.",
+      "cupProfile": "Puede ofrecer una bebida limpia, aromática y equilibrada, con matices perceptibles y una textura delicada según el café y la extracción."
+    },
+    {
+      "id": "13",
+      "modelName": "Moka Express 3 Cups",
+      "category": "Moka",
+      "salePrice": 48000,
+      "brand": "Bialetti",
+      "material": "Aluminio",
+      "isInStore": true,
+      "notes": "Cafetera de cámara inferior que utiliza la presión del vapor para impulsar el agua a través del café molido hacia la cámara superior.",
+      "cupProfile": "Bebida intensa, con cuerpo marcado y aromas tostados. Suele ser más concentrada que el café de filtro, pero no alcanza la presión de extracción propia de un espresso."
+    },
+    {
+      "id": "14",
+      "modelName": "Moka Induction 6 Cups!!",
+      "category": "Moka",
+      "salePrice": 89000,
+      "brand": "Bialetti",
+      "material": "Acero inoxidable y aluminio",
+      "isInStore": false,
+      "notes": "Cafetera moka de mayor capacidad que hace circular el agua a través del café mediante la presión generada al calentar la cámara inferior. Su base está diseñada para funcionar con placas de inducción compatibles.",
+      "cupProfile": "Café de sabor pronunciado, cuerpo medio a intenso y notas tostadas perceptibles. La intensidad y el amargor dependen de la molienda, el calentamiento y la extracción."
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

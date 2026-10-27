@@ -1,0 +1,61 @@
+.volver {
+  display: flex;                                    /* Convierte el elemento en contenedor flexible horizontal */
+  padding: 1rem;                                    /* Espacio interno de 1rem en los 4 lados */
+  margin-top: 5px;                                  /* Margen superior de 5px para despegarlo de arriba */
+  color: var(--texto-detalles);                     /* Color de texto usando la variable de detalles */
+  background-color: var(--fondo-oscuro);            /* Color de fondo usando la variable oscura de la paleta */
+  border-radius: 5px;                               /* Redondea las esquinas a 5px */
+}
+
+.datos {
+  display: grid;                                    /* Activa la maquetación por grilla */
+  justify-content: space-between;                   /* Distribuye el espacio entre las columnas de la grilla */
+  grid-template-columns: repeat(3, 1fr);            /* Crea 3 columnas de igual ancho (fracciones) */
+  gap: 1rem;                                        /* Separación de 1rem entre las celdas de la grilla */
+  padding: 1rem;                                    /* Relleno interno de 1rem en todos los lados */
+  border: solid 1px;                                /* Borde continuo fino de 1px */
+  background-color: var(--fondo-oscuro);            /* Fondo oscuro definido por variable */
+  color: var(--texto-detalles);                     /* Texto en color de detalles claro */
+}
+
+.datos div {
+  display: flex;                                    /* Convierte cada bloque de datos en contenedor flexible */
+  flex-direction: column;                           /* Apila los elementos internos verticalmente (ej: título arriba, valor abajo) */
+}
+
+.botones button {
+  display: flex;                                    /* Activa flexbox dentro de cada botón para alinear su contenido */
+  padding: 1rem;                                    /* Espacio interno de 1rem dentro del botón */
+  color: var(--texto-detalles);                     /* Color del texto del botón */
+  background-color: var(--fondo-oscuro);            /* Color de fondo oscuro para el botón */
+}
+
+.botones {
+  display: flex;                                    /* Alinea los botones horizontalmente en fila */
+  gap: 0.5rem;                                      /* Espacio de 0.5rem entre botón y botón */
+  padding: 1rem 0 0 0;                              /* Relleno: 1rem arriba, 0 a la derecha, abajo e izquierda */
+}
+
+:host {
+  display: block;                                   /* Hace que la etiqueta raíz del componente se comporte como un bloque */
+  padding: 2rem;                                    /* Agrega relleno interno de 2rem separando todo el componente de los bordes */
+  background-color: var(--fondo-oscuro);            /* Aplica el fondo oscuro a todo el componente */
+  color: var(--texto-detalles);                     /* Define el color de texto por defecto para todo el componente */
+}
+
+.pestañas button {
+  display: flex;                                    /* Flexbox para estructurar el contenido de los botones de solapa */
+  padding: 1rem;                                    /* Relleno interno de 1rem dentro de cada pestaña */
+  color: var(--texto-detalles);                     /* Texto de la pestaña en tono claro */
+  background-color: var(--fondo-oscuro);            /* Fondo oscuro para las pestañas */
+}
+
+.pestañas {
+  display: flex;                                    /* Dispone las pestañas en una fila horizontal */
+  gap: 0.5rem;                                      /* Espaciado de 0.5rem entre cada pestaña */
+  padding: 1rem 0 0 0;                              /* Separación superior de 1rem dentro del contenedor de pestañas */
+}
+
+.subtitulo {
+  border-bottom: solid 1px;                         /* Agrega una línea divisoria continua de 1px en la parte inferior */
+}

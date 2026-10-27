@@ -1,0 +1,59 @@
+/* SELECTORES GLOBALES DE ETIQUETA: Afectan a todos los despliegues de opciones */
+select,
+option {
+  color: var(--texto-principal);          /* Aplica el color marrón oscuro definido en la variable de la paleta */
+}
+
+/* CLASE DE ERROR: Para los mensajes de validación en el formulario */
+.errors {
+  color: crimson;                         /* Pinta el texto de un color rojo carmesí llamativo para advertencias */
+}
+
+/* CONTENEDOR PRINCIPAL: Estructura la grilla del formulario */
+.contenedor {
+  display: grid;                          /* Activa el modelo de diseño en cuadrícula (CSS Grid) */
+  grid-template-columns: 1fr 1fr;         /* Divide el espacio en 2 columnas de igual ancho (fracciones) */
+  gap: 1rem;                              /* Espacio o separación de 1rem entre filas y columnas */
+  background: var(--fondo-tarjetas);      /* Color de fondo del bloque usando la variable de la paleta */
+  border: solid 1px;                      /* Borde continuo con grosor de 1 píxel */
+  padding: 2rem;                          /* Relleno o margen interno de 2rem en todos sus lados */
+  border-radius: 6px;                     /* Redondea las 4 esquinas del contenedor con un radio de 6px */
+  border-color: var(--texto-principal);   /* Define el color del borde con la variable (OJO: tenías un espacio de más entre "var" y "(--", arreglado aquí) */
+}
+
+/* CAMPO INDIVIDUAL: Agrupa cada etiqueta (label) con su caja de entrada (input) */
+.control {
+  display: flex;                          /* Activa el modelo de caja flexible (Flexbox) */
+  flex-direction: column;                 /* Apila los elementos verticalmente (la etiqueta arriba, el input abajo) */
+}
+
+/* CONTENEDOR DE BOTONES: Agrupa los botones de acción del formulario */
+.botones {
+  display: flex;                          /* Distribuye los botones de forma horizontal en línea */
+  gap: 1rem;                              /* Separa los botones entre sí por 1rem */
+  font: inherit;                          /* Hereda la tipografía y tamaño del elemento padre */
+}
+
+/* BOTÓN DE GUARDAR: Estilo primario aplicando selector por atributo type="submit" */
+.botones button[type='submit'] {          /* Selecciona únicamente el botón que envía el formulario */
+  background: var(--boton-principal);     /* Fondo del botón utilizando el color marrón principal */
+  color: var(--texto-detalles);           /* Texto del botón en tono crema claro */
+  border: none;                           /* Elimina el borde por defecto del navegador */
+  padding: 0.6rem 1.2rem;                 /* Relleno interno: 0.6rem arriba/abajo y 1.2rem a los costados */
+}
+
+/* BOTÓN DE CANCELAR / LIMPIAR: Estilo secundario aplicando selector por atributo type="button" */
+.botones button[type='button'] {          /* Selecciona únicamente el botón de acción secundaria o descarte */
+  background: var(--fondo-tarjetas);      /* Fondo claro similar al de las tarjetas */
+  color: var(--texto-principal);          /* Texto en el color marrón oscuro principal */
+  border: solid 1px;                      /* Borde continuo fino de 1 píxel */
+  border-color: var(--boton-principal);   /* Color del borde usando la variable del botón principal */
+}
+
+/* PSEUDO-CLASE HOST: Modifica el comportamiento del componente Angular en sí */
+:host {
+  display: flex;                          /* Convierte la etiqueta raíz del componente en un contenedor Flex */
+  flex-direction: column;                 /* Apila los elementos hijos del componente de arriba a abajo */
+  gap: 1rem;                              /* Separación vertical de 1rem entre cada bloque hijo del componente */
+  padding: 0 2rem;                        /* Espacio interno: 0 arriba/abajo, 2rem a los costados */
+}

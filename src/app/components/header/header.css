@@ -1,0 +1,19 @@
+:host {                          /* el elemento <app-header> en sí mismo, que es el contenedor de todo */
+  display: flex;                 /* sus hijos (el logo y el nav) quedan en fila */
+  justify-content: space-between;/* uno pegado a la izquierda y el otro a la derecha */
+  align-items: center;           /* los centra en vertical */
+  height: 5vh;                   /* alto: 10% de la altura de la ventana */
+  padding: 1rem;                 /* espacio interno */
+  border-bottom: solid 1px;
+  border-color: var(--texto-secundario);              
+}
+
+nav {
+  display: flex;                 /* los enlaces en fila */
+  gap: 1rem;                     /* espacio entre un enlace y otro */
+
+  a {                            /* CSS anidado: equivale a "nav a" */
+    text-decoration: none;       /* saca el subrayado */
+    color: var(--texto-secundario); /* color de la paleta */
+  }
+}

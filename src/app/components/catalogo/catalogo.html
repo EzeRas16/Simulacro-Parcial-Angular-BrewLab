@@ -1,0 +1,45 @@
+<h2>Catalogo de productos</h2>
+<p>Explora los metodos de preparacion y compara caracteristicas</p>
+
+<div class="panel">
+    <div class="filtro">
+<label for="catoria">Filtrar por categoria</label>
+<select id="category"
+    #categorySelect 
+    [value]="filtroCategoria()"
+    (change)="filtroCategoria.set(categorySelect.value)">
+    <option value="">Todas las categorias</option>
+    @for (c of categorias; track $index) {
+        <option [value]="c">{{c}}</option>
+    }
+</select>
+    </div>
+
+    <div class="filtro">
+        <label for="sort">Ordenar por precio</label>
+        <select id="sort" #ordenSelect [value] = "orden()"(change)="orden.set(ordenSelect.value)">
+            <option value="">Sin orden especifico</option>
+            <option value="asc">Menor a mayor</option>
+            <option value="desc">Mayor a menor</option>
+        </select>
+    </div>
+
+    <button type="button" (click)="limpiarFiltros()">Limpiar Filtros</button>
+
+</div>
+<div class="lista">
+    @for (p of productosFiltrados(); track p.id) {
+        <article class="tarjeta">
+            <span class="categoria">{{p.category}}</span>
+            <h3>{{p.modelName}}</h3>
+            <span class="marca">{{p.brand}}</span>
+            <div class="pie">
+                <strong>$ {{p.salePrice.toLocaleString('es-AR') }}</strong>
+                @if (p.isInStore){<span>Disponible</span>} @else { <span>Sin Stock</span> }
+            </div>
+            <button type="button" (click)="router.navigate(['/detalle', p.id])">Ver Detalle</button>
+        </article>
+    }@empty {
+        <p>No hay productos para mostrar</p>
+    }
+</div>
